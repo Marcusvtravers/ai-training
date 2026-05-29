@@ -9,15 +9,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/joho/godotenv"
 	"google.golang.org/genai"
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file - make sure it exists in this folder!")
-	}
 
 	ctx := context.Background()
 	client, err := genai.NewClient(ctx, &genai.ClientConfig{

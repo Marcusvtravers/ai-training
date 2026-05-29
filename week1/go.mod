@@ -2,10 +2,7 @@ module atd-ai-fundamentals
 
 go 1.25.3
 
-require (
-	github.com/joho/godotenv v1.5.1
-	google.golang.org/genai v1.58.0
-)
+require google.golang.org/genai v1.58.0
 
 require (
 	cloud.google.com/go v0.116.0 // indirect
