@@ -19,14 +19,8 @@ func main() {
 		log.Fatal("Error loading .env file - make sure it exists in this folder!")
 	}
 
-	apiKey := os.Getenv("GOOGLE_API_KEY")
-	if apiKey == "" {
-		log.Fatal("GOOGLE_API_KEY not found in environment")
-	}
-
 	ctx := context.Background()
 	client, err := genai.NewClient(ctx, &genai.ClientConfig{
-		APIKey:  apiKey,
 		Backend: genai.BackendGeminiAPI,
 	})
 	if err != nil {
